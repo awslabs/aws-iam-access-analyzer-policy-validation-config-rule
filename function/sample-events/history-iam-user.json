@@ -1,0 +1,145 @@
+{
+    "configurationItems": [
+        {
+            "version": "1.3",
+            "accountId": "123456789123",
+            "configurationItemCaptureTime": "2021-06-11T19:49:52.684Z",
+            "configurationItemStatus": "ResourceDiscovered",
+            "configurationStateId": "1687375763247",
+            "configurationItemMD5Hash": "",
+            "arn": "arn:aws:iam::123456789123:user/Matt-Test-User",
+            "resourceType": "AWS::IAM::User",
+            "resourceId": "AIDAABCDEFGHIJKLMNOPQ",
+            "resourceName": "Matt-Test-User",
+            "awsRegion": "global",
+            "availabilityZone": "Not Applicable",
+            "resourceCreationTime": "2021-06-11T19:49:52.684Z",
+            "tags": {},
+            "relatedEvents": [],
+            "relationships": [
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup2",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup1",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup7",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup9",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup3",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup5",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup8",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup0",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup4",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Group",
+                    "resourceId": "AGPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "MyGroup6",
+                    "relationshipName": "Is attached to Group"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-8",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-1",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-9",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-3",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-2",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-5",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-4",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-6",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-0",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                },
+                {
+                    "resourceType": "AWS::IAM::Policy",
+                    "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "Policy6144-7",
+                    "relationshipName": "Is attached to CustomerManagedPolicy"
+                }
+            ],
+            "configuration": "{\"path\":\"/\",\"userName\":\"Matt-Test-User\",\"userId\":\"AIDAABCDEFGHIJKLMNOPQ\",\"arn\":\"arn:aws:iam::123456789123:user/Matt-Test-User\",\"createDate\":\"2022-01-20T17:46:23.000Z\",\"userPolicyList\":[{\"policyName\":\"InlinePolicy\",\"policyDocument\":\"%7B%0A%20%20%20%20%22Version%22%3A%20%222012-10-17%22%2C%0A%20%20%20%20%22Statement%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Sid%22%3A%20%22SomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidSomeReallyLongSidS12345%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Effect%22%3A%20%22Allow%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Action%22%3A%20%22s3%3A%2A%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Resource%22%3A%20%22%2A%22%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%0A%7D\"}],\"groupList\":[\"MyGroup2\",\"MyGroup1\",\"MyGroup7\",\"MyGroup9\",\"MyGroup3\",\"MyGroup5\",\"MyGroup8\",\"MyGroup0\",\"MyGroup4\",\"MyGroup6\"],\"attachedManagedPolicies\":[{\"policyName\":\"Policy6144-5\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-5\"},{\"policyName\":\"Policy6144-6\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-6\"},{\"policyName\":\"Policy6144-2\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-2\"},{\"policyName\":\"Policy6144-3\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-3\"},{\"policyName\":\"Policy6144-7\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-7\"},{\"policyName\":\"Policy6144-4\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-4\"},{\"policyName\":\"Policy6144-9\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-9\"},{\"policyName\":\"Policy6144-1\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-1\"},{\"policyName\":\"Policy6144-0\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-0\"},{\"policyName\":\"Policy6144-8\",\"policyArn\":\"arn:aws:iam::123456789123:policy/Policy6144-8\"}],\"permissionsBoundary\":null,\"tags\":[]}",
+            "supplementaryConfiguration": {}
+        }
+    ]
+}

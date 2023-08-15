@@ -1,0 +1,15 @@
+{
+   "global": {
+     "ignoreWarningFindings": true
+   },
+  "217833312139": {
+    "ignoreFindingsWith": [{
+      "resourceType": "AWS::S3::Bucket",
+      "resourceName": "an-example-bucket"
+    }, {
+      "issueCode": "PASS_ROLE_WITH_STAR_IN_RESOURCE",
+      "resourceType": "AWS::IAM::Role",
+      "resourceName": "administrators/*"
+    }]
+  }
+}

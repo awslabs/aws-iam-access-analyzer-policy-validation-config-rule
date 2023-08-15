@@ -1,0 +1,25 @@
+{
+    "configurationItems": [
+        {
+            "version": "1.3",
+            "accountId": "123456789123",
+            "configurationItemCaptureTime": "2021-06-11T19:49:52.684Z",
+            "configurationItemStatus": "ResourceDiscovered",
+            "configurationStateId": "1689596790596",
+            "configurationItemMD5Hash": "",
+            "arn": "arn:aws:sns:us-east-1:123456789123:MyConfigTestTopic",
+            "resourceType": "AWS::SNS::Topic",
+            "resourceId": "arn:aws:sns:us-east-1:123456789123:MyConfigTestTopic",
+            "resourceName": "MyConfigTestTopic",
+            "awsRegion": "us-east-1",
+            "availabilityZone": "Not Applicable",
+            "tags": {},
+            "relatedEvents": [],
+            "relationships": [],
+            "configuration": "{\"Policy\":\"{\\\"Version\\\":\\\"2008-10-17\\\",\\\"Id\\\":\\\"__default_policy_ID\\\",\\\"Statement\\\":[{\\\"Sid\\\":\\\"__default_statement_ID\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Principal\\\":{\\\"AWS\\\":\\\"*\\\"},\\\"Action\\\":[\\\"SNS:GetTopicAttributes\\\",\\\"SNS:SetTopicAttributes\\\",\\\"SNS:AddPermission\\\",\\\"SNS:RemovePermission\\\",\\\"SNS:DeleteTopic\\\",\\\"SNS:Subscribe\\\",\\\"SNS:ListSubscriptionsByTopic\\\",\\\"SNS:Publish\\\"],\\\"Resource\\\":\\\"arn:aws:sns:us-east-1:123456789123:MyConfigTestTopic\\\",\\\"Condition\\\":{\\\"StringEquals\\\":{\\\"AWS:SourceOwner\\\":\\\"123456789123\\\"}}}]}\",\"Owner\":\"123456789123\",\"TopicArn\":\"arn:aws:sns:us-east-1:123456789123:MyConfigTestTopic\",\"EffectiveDeliveryPolicy\":\"{\\\"http\\\":{\\\"defaultHealthyRetryPolicy\\\":{\\\"minDelayTarget\\\":20,\\\"maxDelayTarget\\\":20,\\\"numRetries\\\":3,\\\"numMaxDelayRetries\\\":0,\\\"numNoDelayRetries\\\":0,\\\"numMinDelayRetries\\\":0,\\\"backoffFunction\\\":\\\"linear\\\"},\\\"disableSubscriptionOverrides\\\":false,\\\"defaultRequestPolicy\\\":{\\\"headerContentType\\\":\\\"text/plain; charset\\u003dUTF-8\\\"}}}\",\"DisplayName\":\"\"}",
+            "supplementaryConfiguration": {
+                "Tags": "[]"
+            }
+        }
+    ]
+}

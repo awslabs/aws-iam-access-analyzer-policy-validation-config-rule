@@ -1,0 +1,26 @@
+{
+    "configurationItems": [
+        {
+            "version": "1.3",
+            "accountId": "123456789123",
+            "configurationItemCaptureTime": "2021-06-11T19:49:52.684Z",
+            "configurationItemStatus": "OK",
+            "configurationStateId": "1665402562597",
+            "configurationItemMD5Hash": "",
+            "arn": "arn:aws:sqs:us-east-1:123456789123:TestQueue",
+            "resourceType": "AWS::SQS::Queue",
+            "resourceId": "https://sqs.us-east-1.amazonaws.com/123456789123/TestQueue",
+            "resourceName": "TestQueue",
+            "awsRegion": "us-east-1",
+            "availabilityZone": "Not Applicable",
+            "resourceCreationTime": "2021-06-11T19:49:52.684Z",
+            "tags": {},
+            "relatedEvents": [],
+            "relationships": [],
+            "configuration": "{\"Policy\":\"{\\\"Version\\\":\\\"2008-10-17\\\",\\\"Id\\\":\\\"__default_policy_ID\\\",\\\"Statement\\\":[{\\\"Sid\\\":\\\"__owner_statement\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Principal\\\":{\\\"AWS\\\":\\\"arn:aws:iam::123456789123:root\\\"},\\\"Action\\\":\\\"SQS:*\\\",\\\"Resource\\\":\\\"*\\\"}]}\",\"ReceiveMessageWaitTimeSeconds\":\"0\",\"CreatedTimestamp\":\"1645625705\",\"MaximumMessageSize\":\"262144\",\"VisibilityTimeout\":\"30\",\"LastModifiedTimestamp\":\"1665402454\",\"SqsManagedSseEnabled\":\"false\",\"DelaySeconds\":\"0\",\"MessageRetentionPeriod\":\"345600\",\"QueueArn\":\"arn:aws:sqs:us-east-1:123456789123:TestQueue\"}",
+            "supplementaryConfiguration": {
+                "Tags": "{}"
+            }
+        }
+    ]
+}

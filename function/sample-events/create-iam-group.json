@@ -1,0 +1,13 @@
+{
+    "version": "1.0",
+    "invokingEvent": "{\"configurationItemDiff\":{\"changedProperties\":{},\"changeType\":\"CREATE\"},\"configurationItem\":{\"relatedEvents\":[],\"relationships\":[],\"configuration\":{\"path\":\"/\",\"groupName\":\"TestConfigGroup\",\"groupId\":\"AGPAABCDEFGHIJKLMNOPQ\",\"arn\":\"arn:aws:iam::123456789123:group/TestConfigGroup\",\"createDate\":\"2023-07-13T18:50:01.000Z\",\"groupPolicyList\":[],\"attachedManagedPolicies\":[]},\"supplementaryConfiguration\":{},\"tags\":{},\"configurationItemVersion\":\"1.3\",\"configurationItemCaptureTime\":\"2023-07-13T18:52:10.204Z\",\"configurationStateId\":1689274330204,\"awsAccountId\":\"123456789123\",\"configurationItemStatus\":\"ResourceDiscovered\",\"resourceType\":\"AWS::IAM::Group\",\"resourceId\":\"AGPAABCDEFGHIJKLMNOPQ\",\"resourceName\":\"TestConfigGroup\",\"ARN\":\"arn:aws:iam::123456789123:group/TestConfigGroup\",\"awsRegion\":\"global\",\"availabilityZone\":\"Not Applicable\",\"configurationStateMd5Hash\":\"\",\"resourceCreationTime\":\"2023-07-13T18:50:01.000Z\"},\"notificationCreationTime\":\"2023-07-13T18:52:10.378Z\",\"messageType\":\"ConfigurationItemChangeNotification\",\"recordVersion\":\"1.3\"}",
+    "ruleParameters": "{}",
+    "resultToken": "abcd",
+    "eventLeftScope": false,
+    "executionRoleArn": "arn:aws:iam::123456789123:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
+    "configRuleArn": "arn:aws:config:us-east-1:123456789123:config-rule/config-rule-530zrx",
+    "configRuleName": "test-rule-1",
+    "configRuleId": "config-rule-530zrx",
+    "accountId": "123456789123",
+    "evaluationMode": "DETECTIVE"
+}

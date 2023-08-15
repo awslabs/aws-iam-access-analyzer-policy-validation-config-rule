@@ -1,0 +1,34 @@
+{
+    "configurationItems": [
+        {
+            "version": "1.3",
+            "accountId": "123456789123",
+            "configurationItemCaptureTime": "2021-06-11T19:49:52.684Z",
+            "configurationItemStatus": "OK",
+            "configurationStateId": "1689857715590",
+            "configurationItemMD5Hash": "",
+            "arn": "arn:aws:s3:::bucket-bucket-444",
+            "resourceType": "AWS::S3::Bucket",
+            "resourceId": "bucket-bucket-444",
+            "resourceName": "bucket-bucket-444",
+            "awsRegion": "us-east-1",
+            "availabilityZone": "Regional",
+            "resourceCreationTime": "2021-06-11T19:49:52.684Z",
+            "tags": {},
+            "relatedEvents": [],
+            "relationships": [],
+            "configuration": "{\"name\":\"bucket-bucket-444\",\"owner\":{\"displayName\":null,\"id\":\"32b756591269409c14500e0e3618a6947452385b2e16cab13d39dc097da34fa9\"},\"creationDate\":\"2021-07-07T15:55:21.000Z\"}",
+            "supplementaryConfiguration": {
+                "AccessControlList": "\"{\\\"grantSet\\\":null,\\\"grantList\\\":[{\\\"grantee\\\":{\\\"id\\\":\\\"32b756591269409c14500e0e3618a6947452385b2e16cab13d39dc097da34fa9\\\",\\\"displayName\\\":null},\\\"permission\\\":\\\"FullControl\\\"}],\\\"owner\\\":{\\\"displayName\\\":null,\\\"id\\\":\\\"32b756591269409c14500e0e3618a6947452385b2e16cab13d39dc097da34fa9\\\"},\\\"isRequesterCharged\\\":false}\"",
+                "BucketAccelerateConfiguration": "{\"status\":null}",
+                "BucketLoggingConfiguration": "{\"destinationBucketName\":null,\"logFilePrefix\":null}",
+                "BucketNotificationConfiguration": "{\"configurations\":{\"MyPrincipalTest\":{\"type\":\"TopicConfiguration\",\"topicARN\":\"arn:aws:sns:us-east-1:123456789123:MyPrincipalTest\",\"events\":[\"s3:ObjectCreated:*\",\"s3:ObjectRemoved:*\"],\"objectPrefixes\":[],\"filter\":{\"s3KeyFilter\":{\"filterRules\":[{\"name\":\"Prefix\",\"value\":\"\"},{\"name\":\"Suffix\",\"value\":\"\"}]}}}}}",
+                "BucketPolicy": "{\"policyText\":\"{\\\"Version\\\":\\\"2012-10-17\\\",\\\"Statement\\\":[{\\\"Sid\\\":\\\"Statement1\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Principal\\\":{\\\"AWS\\\":\\\"arn:aws:iam::123456789123:root\\\"},\\\"Action\\\":\\\"s3:*\\\",\\\"Resource\\\":\\\"arn:aws:s3:::bucket-bucket-444\\\"}]}\"}",
+                "BucketVersioningConfiguration": "{\"status\":\"Off\",\"isMfaDeleteEnabled\":null}",
+                "IsRequesterPaysEnabled": "false",
+                "PublicAccessBlockConfiguration": "{\"blockPublicAcls\":true,\"ignorePublicAcls\":true,\"blockPublicPolicy\":true,\"restrictPublicBuckets\":true}",
+                "ServerSideEncryptionConfiguration": "{\"rules\":[{\"applyServerSideEncryptionByDefault\":{\"sseAlgorithm\":\"AES256\",\"kmsMasterKeyID\":null},\"bucketKeyEnabled\":false}]}"
+            }
+        }
+    ]
+}

@@ -1,0 +1,177 @@
+Parameters:
+  FunctionVersion:
+    Type: String
+    Default: "1.0"
+  ExceptionsS3BucketName:
+    Type: String
+    Default: ""
+  ExceptionsS3FilePrefix:
+    Type: String
+    Default: ""
+  RegionToValidateGlobalResources:
+    Type: String
+    Default: "us-east-1"
+  ErrorNotificationsEmailAddress:
+    Type: String
+    Default: ""
+
+Conditions:
+  ExceptionsFileProvided: !Not
+    - !Equals
+      - !Ref ExceptionsS3BucketName
+      - ""
+
+  ErrorNotificationsEmailAddressProvided: !Not
+    - !Equals
+      - !Ref ErrorNotificationsEmailAddress
+      - ""
+
+  ThisRegionMatchesGlobalRegion: !Equals
+    - !Ref RegionToValidateGlobalResources
+    - !Ref 'AWS::Region'
+
+
+Resources:
+  PolicyValidationConfigRuleFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: policy-validation-config-rule
+      Description: The lambda function that determines runs the custom policy validation config rules
+      Code:
+        S3Bucket: iam-access-analyzer-policy-validation-config-rule
+        S3Key: !Sub policy-validation-config-rule-${FunctionVersion}.zip
+      Handler: handler.handle
+      MemorySize: 256
+      Role: !GetAtt PolicyValidationConfigRuleFunctionRole.Arn
+      Runtime: python3.9
+      Timeout: 30
+      Environment:
+        Variables:
+          !If
+            - ExceptionsFileProvided
+            - EXCEPTIONS_S3_BUCKET_NAME: !Ref ExceptionsS3BucketName
+              EXCEPTIONS_S3_FILE_PREFIX: !Ref ExceptionsS3FilePrefix
+              AWS_ACCOUNT_ID: !Ref "AWS::AccountId"
+            - !Ref 'AWS::NoValue'
+
+  PolicyValidationConfigRuleFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: policy-validation-config-rule
+      Description: The role used by the custom policy validation config rule
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: "AllowDetectionAccess"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "*"
+              - Effect: "Allow"
+                Action:
+                  - config:PutEvaluations
+                  - config:GetResourceConfigHistory
+                  - access-analyzer:ValidatePolicy
+                  - secretsmanager:GetResourcePolicy
+                Resource: "*"
+              - !If
+                - ExceptionsFileProvided
+                - Sid: AllowAccessToExceptionsBucket
+                  Effect: "Allow"
+                  Action: s3:GetObject
+                  Resource: !Sub "arn:aws:s3:::${ExceptionsS3BucketName}/${ExceptionsS3FilePrefix}"
+                - !Ref 'AWS::NoValue'
+
+  PolicyValidationConfigRuleFunctionPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !GetAtt PolicyValidationConfigRuleFunction.Arn
+      Principal: config.amazonaws.com
+      SourceArn: !Sub "arn:aws:config:${AWS::Region}:${AWS::AccountId}:config-rule/*"
+
+  PolicyValidationConfigRule:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: policy-validation-config-rule
+      Description: Runs policy validation on resources that contain IAM policies
+      Scope:
+        ComplianceResourceTypes:
+          - !If [ThisRegionMatchesGlobalRegion, "AWS::IAM::Policy", !Ref "AWS::NoValue"]
+          - !If [ThisRegionMatchesGlobalRegion, "AWS::IAM::Role", !Ref "AWS::NoValue"]
+          - !If [ThisRegionMatchesGlobalRegion, "AWS::IAM::User", !Ref "AWS::NoValue"]
+          - !If [ThisRegionMatchesGlobalRegion, "AWS::IAM::Group", !Ref "AWS::NoValue"]
+          - AWS::KMS::Key
+          - AWS::S3::Bucket
+          - AWS::S3::AccessPoint
+          - AWS::SQS::Queue
+          - AWS::SecretsManager::Secret
+          - AWS::SNS::Topic
+          - AWS::Logs::Destination
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceIdentifier: !GetAtt PolicyValidationConfigRuleFunction.Arn
+        SourceDetails:
+          - EventSource: aws.config
+            MessageType: ConfigurationItemChangeNotification
+          - EventSource: aws.config
+            MessageType: OversizedConfigurationItemChangeNotification
+    DependsOn: PolicyValidationConfigRuleFunctionPermission
+
+
+  PolicyValidationConfigRuleFunctionAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Condition: ErrorNotificationsEmailAddressProvided
+    Properties:
+      AlarmName: "AccessAnalyzerPolicyValidationConfigRuleAlarm"
+      AlarmDescription: "Alarm on errors when validating IAM policies using the Access Analyzer policy validation config rule."
+      Namespace: "AWS/Lambda"
+      MetricName: "Errors"
+      Dimensions:
+        - Name: "FunctionName"
+          Value: !Ref PolicyValidationConfigRuleFunction
+      Statistic: "Sum"
+      ComparisonOperator: "GreaterThanThreshold"
+      Threshold: 0
+      EvaluationPeriods: 1
+      Period: 60
+      TreatMissingData: "notBreaching"
+      AlarmActions:
+        - !GetAtt ErrorNotificationTopic.TopicArn
+
+  ErrorNotificationTopic:
+    Type: AWS::SNS::Topic
+    Condition: ErrorNotificationsEmailAddressProvided
+    Properties:
+      DisplayName: 'policy-validation-config-rule-errors'
+      TopicName: 'policy-validation-config-rule-errors'
+      Subscription:
+        - Endpoint: !Ref ErrorNotificationsEmailAddress
+          Protocol: "email"
+
+  ErrorNotificationTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Condition: ErrorNotificationsEmailAddressProvided
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service: "cloudwatch.amazonaws.com"
+            Action: sns:Publish
+            Resource: !Ref ErrorNotificationTopic
+            Condition:
+              StringEquals:
+                "aws:SourceAccount": !Ref "AWS::AccountId"
+      Topics:
+        - !Ref ErrorNotificationTopic

@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "invokingEvent": "{\"configurationItemDiff\":{}, \"configurationItem\":{\"supplementaryConfiguration\":{\"Tags\":{}},\"tags\":{},\"configurationItemVersion\":\"1.3\",\"configurationItemCaptureTime\":\"2021-06-16T14:15:52.797Z\",\"configurationStateId\":1623852952797,\"awsAccountId\":\"123456789123\",\"configurationItemStatus\":\"OK\",\"resourceType\":\"AWS::SQS::Queue\",\"resourceId\":\"https://sqs.us-east-1.amazonaws.com/123456789123/TestQueue\",\"resourceName\":\"TestQueue\",\"ARN\":\"arn:aws:sqs:us-east-1:123456789123:TestQueue\",\"awsRegion\":\"us-east-1\",\"availabilityZone\":\"Not Applicable\",\"configurationStateMd5Hash\":\"\",\"resourceCreationTime\":\"2021-06-16T13:03:32.000Z\"},\"notificationCreationTime\":\"2021-06-16T14:15:54.491Z\",\"messageType\":\"ConfigurationItemChangeNotification\",\"recordVersion\":\"1.3\"}",
+    "ruleParameters": "{}",
+    "resultToken": "xyz",
+    "eventLeftScope": true,
+    "executionRoleArn": "arn:aws:iam::123456789123:role/aws-controltower-ConfigRecorderRole",
+    "configRuleArn": "arn:aws:config:us-east-1:123456789123:config-rule/config-rule-htvpcm",
+    "configRuleName": "my-test-rule",
+    "configRuleId": "config-rule-htvpcm",
+    "accountId": "123456789123"
+}

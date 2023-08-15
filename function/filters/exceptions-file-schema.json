@@ -1,0 +1,92 @@
+{
+    "type": "object",
+    "properties": {
+        "global": {
+            "ref": "#/$defs/findingsToIgnore"
+        }
+    },
+    "patternProperties": {
+        "^[0-9]*$": {
+            "$ref": "#/$defs/findingsToIgnore",
+            "title": "One to many account IDs",
+            "description": "Used to list account specific exception rules.  Global rules that conflict are overridden by account rules.  IgnoreFindingsWith rules are appended to existing Global IgnoreFindingsWith rules."
+        }
+    },
+    "additionalProperties": false,
+    "$defs": {
+        "findingsToIgnore": {
+            "type": "object",
+            "properties": {
+                "inheritGlobalIgnoreRules": {
+                    "type": "boolean",
+                    "default": "true",
+                    "description": "Used to isolate exceptions for a specific account. This flag allows you to turn off global finding exceptions and is useful if you want to have isolated configuration for a specific account"
+                },
+                "ignoreErrorFindings": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "ignoreSecurityWarningFindings": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "ignoreWarningFindings": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "ignoreSuggestionFindings": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "ignoreFindingsWith": {
+                    "type": "array",
+                    "items": {
+                        "description": "All fields are optional.  Fields are AND'd together and all fields for each item in the ignore list must match for an item to be ignored.",
+                        "type": "object",
+                        "properties": {
+                            "resourceType": {
+                                "type": "string",
+                                "description": "The type of resource. In CloudFormation resource format (e.g. AWS::IAM::Role). Exact match, no wildcards, case-insensitive."
+                            },
+                            "issueCode": {
+                                "type": "string",
+                                "description": "The issue code returned from the Access Analyzer ValidatePolicy API. Exact match, no wildcards, case-insensitive."
+                            },
+                            "findingType": {
+                                "type": "string",
+                                "description": "The finding type returned from the Access Analyzer ValidatePolicy API. Exact match, no wildcards, case-insensitive.",
+                                "enum": [
+                                    "ERROR",
+                                    "SECURITY_WARNING",
+                                    "WARNING",
+                                    "SUGGESTION"
+                                ]
+                            },
+                            "resourceName": {
+                                "type": "string",
+                                "description": "The name of the resource. Supports wildcards (*). Includes path for resources that support paths. Case-insensitive."
+                            },
+                            "policyType": {
+                                "type": "string",
+                                "description": "The type of IAM policy to ignore.  Exact match, no wildcards, case-insensitive.",
+                                "enum": [
+                                    "SERVICE_CONTROL_POLICY",
+                                    "PERMISSIONS_BOUNDARY",
+                                    "IDENTITY_POLICY",
+                                    "RESOURCE_POLICY",
+                                    "VPC_ENDPOINT_POLICY"
+                                ]
+                            },
+                            "region": {
+                                "type": "string",
+                                "description": "Used to ignore resources in a specific region. This is the region that the validation is run in. Exact match, no wildcards, case-insensitive."
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                }
+            },
+          "additionalProperties": false
+        }
+    }
+}

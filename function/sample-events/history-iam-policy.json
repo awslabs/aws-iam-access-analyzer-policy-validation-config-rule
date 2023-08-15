@@ -1,0 +1,31 @@
+{
+    "configurationItems": [
+        {
+            "version": "1.3",
+            "accountId": "123456789123",
+            "configurationItemCaptureTime": "2021-06-11T19:49:52.684Z",
+            "configurationItemStatus": "ResourceDiscovered",
+            "configurationStateId": "1687375756530",
+            "configurationItemMD5Hash": "",
+            "arn": "arn:aws:iam::123456789123:policy/ConfigAccessPolicy",
+            "resourceType": "AWS::IAM::Policy",
+            "resourceId": "ANPAABCDEFGHIJKLMNOPQ",
+            "resourceName": "ConfigAccessPolicy",
+            "awsRegion": "global",
+            "availabilityZone": "Not Applicable",
+            "resourceCreationTime": "2021-06-11T19:49:52.684Z",
+            "tags": {},
+            "relatedEvents": [],
+            "relationships": [
+                {
+                    "resourceType": "AWS::IAM::Role",
+                    "resourceId": "AROAABCDEFGHIJKLMNOPQ",
+                    "resourceName": "TestConfigRule",
+                    "relationshipName": "Is attached to Role"
+                }
+            ],
+            "configuration": "{\"policyName\":\"ConfigAccessPolicy\",\"policyId\":\"ANPAABCDEFGHIJKLMNOPQ\",\"arn\":\"arn:aws:iam::123456789123:policy/ConfigAccessPolicy\",\"path\":\"/\",\"defaultVersionId\":\"v1\",\"attachmentCount\":1,\"permissionsBoundaryUsageCount\":0,\"isAttachable\":true,\"description\":null,\"createDate\":\"2018-12-04T22:32:00.000Z\",\"updateDate\":\"2018-12-04T22:32:00.000Z\",\"policyVersionList\":[{\"document\":\"%7B%0A%20%20%20%20%22Version%22%3A%20%222012-10-17%22%2C%0A%20%20%20%20%22Statement%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Effect%22%3A%20%22Allow%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Action%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22s3%3ACreateBucket%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22s3%3ADeleteBucket%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22s3%3APutBucketPolicy%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Resource%22%3A%20%22arn%3Aaws%3As3%3A%3A%3Aconfig-bucket-trustedservice-do-not-delete-%2A%22%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Effect%22%3A%20%22Allow%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Action%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22s3%3AListAllMyBuckets%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Resource%22%3A%20%22arn%3Aaws%3As3%3A%3A%3A%2A%22%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Effect%22%3A%20%22Allow%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Action%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22config%3A%2A%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Resource%22%3A%20%22%2A%22%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Effect%22%3A%20%22Allow%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Action%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22iam%3AGetRole%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22iam%3APassRole%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22iam%3ACreateServiceLinkedRole%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22iam%3ADeleteServiceLinkedRole%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22iam%3AGetServiceLinkedRoleDeletionStatus%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Resource%22%3A%20%22arn%3Aaws%3Aiam%3A%3A%2A%3Arole%2Faws-service-role%2Fconfig.amazonaws.com%2F%2A%22%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%0A%7D\",\"versionId\":\"v1\",\"isDefaultVersion\":true,\"createDate\":\"2018-12-04T22:32:00.000Z\"}]}",
+            "supplementaryConfiguration": {}
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "configurationItems": [
+        {
+            "version": "1.3",
+            "accountId": "123456789123",
+            "configurationItemCaptureTime": "2021-06-11T19:49:52.684Z",
+            "configurationItemStatus": "ResourceDiscovered",
+            "configurationStateId": "1689856530578",
+            "configurationItemMD5Hash": "",
+            "arn": "arn:aws:logs:us-east-1:123456789123:destination:testDestination",
+            "resourceType": "AWS::Logs::Destination",
+            "resourceId": "testDestination",
+            "resourceName": "testDestination",
+            "awsRegion": "us-east-1",
+            "availabilityZone": "Regional",
+            "resourceCreationTime": "2021-06-11T19:49:52.684Z",
+            "tags": {},
+            "relatedEvents": [],
+            "relationships": [],
+            "configuration": "{\"Arn\":\"arn:aws:logs:us-east-1:123456789123:destination:testDestination\",\"DestinationName\":\"testDestination\",\"DestinationPolicy\":\"{ \\n    \\\"Version\\\" : \\\"2012-10-17\\\", \\n    \\\"Statement\\\" : [ \\n        { \\n            \\\"Effect\\\" : \\\"Allow\\\",\\n            \\\"Principal\\\" : \\\"*\\\",\\n            \\\"Action\\\" : \\\"logs:PutSubscriptionFilter\\\", \\n            \\\"Resource\\\" : \\\"arn:aws:logs:region:123456789123:destination:testDestination\\\",\\n            \\\"Condition\\\": {\\n               \\\"StringEquals\\\" : {\\n                   \\\"aws:PrincipalOrgID\\\" : [\\\"o-1234567890\\\"]\\n                }\\n            }\\n        } \\n    ] \\n}\",\"RoleArn\":\"arn:aws:iam::123456789123:role/CWLtoKinesisRole\",\"TargetArn\":\"arn:aws:kinesis:us-east-1:123456789123:stream/RootAccess\"}",
+            "supplementaryConfiguration": {}
+        }
+    ]
+}

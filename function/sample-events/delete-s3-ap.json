@@ -1,0 +1,13 @@
+{
+    "version": "1.0",
+    "invokingEvent": "{\"configurationItemDiff\":{\"changedProperties\":{\"Configuration\":{\"previousValue\":{\"Name\":\"test-normal-config-ap\",\"Alias\":\"test-normal-config-a-4cm95mea95n9gwxgjf3tn4c9bzhhause1b-s3alias\",\"Bucket\":\"a-test-bucket-for-matt-111\",\"BucketAccountId\":\"123456789123\",\"PublicAccessBlockConfiguration\":{\"BlockPublicAcls\":true,\"IgnorePublicAcls\":true,\"BlockPublicPolicy\":true,\"RestrictPublicBuckets\":true},\"Policy\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"Statement1\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::123456789123:root\"},\"Action\":\"s3:*\",\"Resource\":\"arn:aws:s3:us-east-1:123456789123:accesspoint/test-normal-config-ap\"}]},\"NetworkOrigin\":\"Internet\",\"Arn\":\"arn:aws:s3:us-east-1:123456789123:accesspoint/test-normal-config-ap\"},\"updatedValue\":null,\"changeType\":\"DELETE\"}},\"changeType\":\"DELETE\"},\"configurationItem\":{\"relatedEvents\":[],\"relationships\":[],\"configuration\":null,\"supplementaryConfiguration\":{},\"tags\":{},\"configurationItemVersion\":\"1.3\",\"configurationItemCaptureTime\":\"2023-07-14T13:37:27.593Z\",\"configurationStateId\":1689341847593,\"awsAccountId\":\"123456789123\",\"configurationItemStatus\":\"ResourceDeleted\",\"resourceType\":\"AWS::S3::AccessPoint\",\"resourceId\":\"test-normal-config-ap\",\"resourceName\":\"test-normal-config-ap\",\"ARN\":\"arn:aws:s3:us-east-1:123456789123:accesspoint/test-normal-config-ap\",\"awsRegion\":\"us-east-1\",\"availabilityZone\":null,\"configurationStateMd5Hash\":\"\",\"resourceCreationTime\":null},\"notificationCreationTime\":\"2023-07-14T13:37:29.145Z\",\"messageType\":\"ConfigurationItemChangeNotification\",\"recordVersion\":\"1.3\"}",
+    "ruleParameters": "{}",
+    "resultToken": "abcd",
+    "eventLeftScope": true,
+    "executionRoleArn": "arn:aws:iam::123456789123:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
+    "configRuleArn": "arn:aws:config:us-east-1:123456789123:config-rule/config-rule-530zrx",
+    "configRuleName": "test-rule-1",
+    "configRuleId": "config-rule-530zrx",
+    "accountId": "123456789123",
+    "evaluationMode": "DETECTIVE"
+}

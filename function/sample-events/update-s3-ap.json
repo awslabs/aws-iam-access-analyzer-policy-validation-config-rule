@@ -1,0 +1,13 @@
+{
+    "version": "1.0",
+    "invokingEvent": "{\"configurationItemDiff\":{\"changedProperties\":{\"Configuration.Policy.Version\":{\"previousValue\":null,\"updatedValue\":\"2012-10-17\",\"changeType\":\"CREATE\"},\"Configuration.Policy.Statement\":{\"previousValue\":null,\"updatedValue\":[{\"Sid\":\"Statement1\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::123456789123:root\"},\"Action\":\"s3:*\",\"Resource\":\"arn:aws:s3:us-east-1:123456789123:accesspoint/test-normal-config-ap\"}],\"changeType\":\"CREATE\"}},\"changeType\":\"UPDATE\"},\"configurationItem\":{\"relatedEvents\":[],\"relationships\":[],\"configuration\":{\"Name\":\"test-normal-config-ap\",\"Alias\":\"test-normal-config-a-4cm95mea95n9gwxgjf3tn4c9bzhhause1b-s3alias\",\"Bucket\":\"a-test-bucket-for-matt-111\",\"BucketAccountId\":\"123456789123\",\"PublicAccessBlockConfiguration\":{\"BlockPublicAcls\":true,\"IgnorePublicAcls\":true,\"BlockPublicPolicy\":true,\"RestrictPublicBuckets\":true},\"Policy\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"Statement1\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::123456789123:root\"},\"Action\":\"s3:*\",\"Resource\":\"arn:aws:s3:us-east-1:123456789123:accesspoint/test-normal-config-ap\"}]},\"NetworkOrigin\":\"Internet\",\"Arn\":\"arn:aws:s3:us-east-1:123456789123:accesspoint/test-normal-config-ap\"},\"supplementaryConfiguration\":{},\"tags\":{},\"configurationItemVersion\":\"1.3\",\"configurationItemCaptureTime\":\"2023-07-14T13:35:17.497Z\",\"configurationStateId\":1689341717497,\"awsAccountId\":\"123456789123\",\"configurationItemStatus\":\"OK\",\"resourceType\":\"AWS::S3::AccessPoint\",\"resourceId\":\"test-normal-config-ap\",\"resourceName\":\"test-normal-config-ap\",\"ARN\":\"arn:aws:s3:us-east-1:123456789123:accesspoint/test-normal-config-ap\",\"awsRegion\":\"us-east-1\",\"availabilityZone\":\"Regional\",\"configurationStateMd5Hash\":\"\",\"resourceCreationTime\":null},\"notificationCreationTime\":\"2023-07-14T13:35:18.639Z\",\"messageType\":\"ConfigurationItemChangeNotification\",\"recordVersion\":\"1.3\"}",
+    "ruleParameters": "{}",
+    "resultToken": "abcd",
+    "eventLeftScope": false,
+    "executionRoleArn": "arn:aws:iam::123456789123:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
+    "configRuleArn": "arn:aws:config:us-east-1:123456789123:config-rule/config-rule-530zrx",
+    "configRuleName": "test-rule-1",
+    "configRuleId": "config-rule-530zrx",
+    "accountId": "123456789123",
+    "evaluationMode": "DETECTIVE"
+}

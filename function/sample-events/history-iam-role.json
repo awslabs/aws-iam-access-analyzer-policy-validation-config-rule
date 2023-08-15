@@ -1,0 +1,25 @@
+{
+    "configurationItems": [
+        {
+            "version": "1.3",
+            "accountId": "123456789123",
+            "configurationItemCaptureTime": "2021-06-11T19:49:52.684Z",
+            "configurationItemStatus": "ResourceDiscovered",
+            "configurationStateId": "1687375759788",
+            "configurationItemMD5Hash": "",
+            "arn": "arn:aws:iam::123456789123:role/S3LaunchRole",
+            "resourceType": "AWS::IAM::Role",
+            "resourceId": "AROAABCDEFGHIJKLMNOPQ",
+            "resourceName": "S3LaunchRole",
+            "awsRegion": "global",
+            "availabilityZone": "Not Applicable",
+            "resourceCreationTime": "2021-06-11T19:49:52.684Z",
+            "tags": {},
+            "relatedEvents": [],
+            "relationships": [],
+            "configuration": "{\"path\":\"/\",\"roleName\":\"S3LaunchRole\",\"roleId\":\"AROAABCDEFGHIJKLMNOPQ\",\"arn\":\"arn:aws:iam::123456789123:role/S3LaunchRole\",\"createDate\":\"2020-04-22T16:56:41.000Z\",\"assumeRolePolicyDocument\":\"%7B%22Version%22%3A%222012-10-17%22%2C%22Statement%22%3A%5B%7B%22Effect%22%3A%22Allow%22%2C%22Principal%22%3A%7B%22Service%22%3A%22servicecatalog.amazonaws.com%22%7D%2C%22Action%22%3A%22sts%3AAssumeRole%22%7D%5D%7D\",\"instanceProfileList\":[],\"rolePolicyList\":[{\"policyName\":\"LaunchRolePolicy\",\"policyDocument\":\"%7B%0A%20%20%20%20%22Version%22%3A%20%222012-10-17%22%2C%0A%20%20%20%20%22Statement%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Effect%22%3A%20%22Allow%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Action%22%3A%20%22%2A%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Resource%22%3A%20%22%2A%22%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Effect%22%3A%20%22Deny%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Action%22%3A%20%22cloudformation%3ACreateStack%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Resource%22%3A%20%22%2A%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Condition%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22Null%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22aws%3AResourceTag%2Faws%3Aservicecatalog%3AproductArn%22%3A%20%22false%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%0A%7D\"}],\"attachedManagedPolicies\":[],\"permissionsBoundary\":null,\"tags\":[],\"roleLastUsed\":null}",
+            "supplementaryConfiguration": {}
+        }
+    ],
+    "nextToken": ""
+}
