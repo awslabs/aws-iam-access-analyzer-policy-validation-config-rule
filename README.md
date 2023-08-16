@@ -9,8 +9,8 @@ An [AWS Config Custom Lambda Rule](https://docs.aws.amazon.com/config/latest/dev
 
 Deploy the CloudFormation template using the AWS CLI:
 ```
-git clone iam-access-analyzer-config-rule
-cd iam-access-analyzer-config-rule
+git clone https://github.com/awslabs/aws-iam-access-analyzer-policy-validation-config-rule.git
+cd aws-iam-access-analyzer-policy-validation-config-rule
 aws cloudformation deploy \
     --stack-name iam-policy-validation-config-rule \
     --template-file templates/template.yaml \
