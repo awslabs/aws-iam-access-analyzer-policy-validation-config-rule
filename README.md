@@ -11,12 +11,14 @@ Deploy the CloudFormation template using the AWS CLI:
 ```
 git clone https://github.com/awslabs/aws-iam-access-analyzer-policy-validation-config-rule.git
 cd aws-iam-access-analyzer-policy-validation-config-rule
-aws cloudformation deploy \
+aws cloudformation deploy --region us-east-1 \
     --stack-name iam-policy-validation-config-rule \
     --template-file templates/template.yaml \
     --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
     --parameter-overrides RegionToValidateGlobalResources='us-east-1'
 ```
+
+Note: the required resources for this stack are hosted in us-east-1, and the stack only supports being deployed in us-east-1 today.
 
 ### Cost of this solution
 
